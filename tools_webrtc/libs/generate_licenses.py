@@ -29,6 +29,7 @@ import logging
 import os
 import re
 import subprocess
+import html
 
 # Third_party library to licences mapping. Keys are names of the libraries
 # (right after the `third_party/` prefix)
@@ -224,7 +225,7 @@ class LicenseBuilder(object):
       for path in self.common_licenses_dict[license_lib]:
         license_path = os.path.join(WEBRTC_ROOT, path)
         with open(license_path, 'r') as license_file:
-          license_text = cgi.escape(license_file.read(), quote=True)
+          license_text = html.escape(license_file.read(), quote=True)
           output_license_file.write(license_text)
           output_license_file.write('\n')
       output_license_file.write('```\n\n')

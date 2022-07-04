@@ -704,6 +704,8 @@ std::vector<AudioCodec> WebRtcVoiceEngine::CollectCodecs(
       if (spec.info.supports_network_adaption) {
         codec.AddFeedbackParam(
             FeedbackParam(kRtcpFbParamTransportCc, kParamValueEmpty));
+        codec.AddFeedbackParam(
+            FeedbackParam(kRtcpFbParamNack, kParamValueEmpty));
       }
 
       if (spec.info.allow_comfort_noise) {
