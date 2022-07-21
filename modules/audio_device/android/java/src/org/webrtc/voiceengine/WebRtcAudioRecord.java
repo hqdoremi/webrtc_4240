@@ -363,7 +363,7 @@ public class WebRtcAudioRecord {
   }
 
   private static int getDefaultAudioSource() {
-    return AudioSource.USAGE_MEDIA;
+    return AudioSource.DEFAULT;
   }
 
   // Sets all recorded samples to zero if |mute| is true, i.e., ensures that
