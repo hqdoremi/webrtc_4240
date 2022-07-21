@@ -64,7 +64,7 @@ public class WebRtcAudioTrack {
   public static void setStreamType(int type) {
     Logging.w(TAG, "StreamType is changed from: "
         + streamType + " to " + type);
-        streamType = typ;
+        streamType = type;
   }
 
   private static int getDefaultUsageAttribute() {
